@@ -10,3 +10,4 @@ libgl-dev
 build-essential
 python3-opencv
 libopencv-dev
+mesa-utils
