@@ -8,3 +8,5 @@ libgomp1
 libgl1
 libgl-dev
 build-essential
+python3-opencv
+libopencv-dev
