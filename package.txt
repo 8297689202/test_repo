@@ -1,6 +1,10 @@
-libgl1
+libgl1-mesa-glx
+libglu1-mesa
 libglib2.0-0
 libsm6
-libxext6
 libxrender1
+libxext6
 libgomp1
+libgl1
+libgl-dev
+build-essential
