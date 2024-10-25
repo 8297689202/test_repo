@@ -1,8 +1,8 @@
 streamlit==1.31.0
-paddlepaddle==2.6.0
-paddleocr==2.7.0
+paddlepaddle==2.6.2
+paddleocr==2.9.1
 pypdfium2==4.25.0
-pdfplumber==0.10.3
-Pillow==10.0.0
-numpy==1.24.3
-requests==2.31.0
+pdfplumber==0.11.4
+Pillow==10.4.0
+numpy==1.26.4
+requests==2.32.3
