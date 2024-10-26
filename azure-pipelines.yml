@@ -1,0 +1,44 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.10'
+    addToPath: true
+  displayName: 'Setup Python'
+
+- script: |
+    sudo apt-get update
+    sudo apt-get install -y \
+      libgl1-mesa-glx \
+      libglu1-mesa \
+      libglib2.0-0 \
+      libsm6 \
+      libxrender1 \
+      libxext6 \
+      libgomp1 \
+      libgl1 \
+      libgl-dev \
+      build-essential \
+      python3-opencv \
+      libopencv-dev \
+      mesa-utils
+  displayName: 'Install system dependencies'
+
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+  displayName: 'Install Python packages'
+
+- script: |
+    streamlit run app.py
+  displayName: 'Run Streamlit app'
